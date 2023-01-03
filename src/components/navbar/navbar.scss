@@ -1,0 +1,17 @@
+@import '../../Variables.scss';
+
+.logoContainer{
+    width: 80px;
+    height: 60px;
+}
+.profilePhoto{
+    width: 50px;
+height: 50px;
+}
+.signOut{
+    background-color: $primaryColor !important;
+    height: 40px;
+}
+.profilePhotoBig{
+    margin: 0 15px ;
+}

@@ -1,0 +1,80 @@
+.physicalBooksContainer {
+  width: 160px;
+  height: 213px;
+  position: absolute;
+  left: 0;
+  top: 100px;
+  animation: ratContainerAnimation;
+  animation-duration: 2s;
+  .physicalBooksFigure {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .imgRat {
+      width: 100%;
+      height: 100%;
+    }
+    .physicalBooksText {
+      position: absolute;
+      bottom: -11px;
+      left: 22px;
+      font-size: 1.05rem;
+    }
+  }
+}
+@keyframes ratContainerAnimation {
+  0% {
+    opacity: 0;
+    left: -100px;
+    top: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+    top: 100px;
+  }
+}
+@media (max-width: 576px) {
+  .physicalBooksContainer {
+    width: 100px;
+    height: 150px;
+    .physicalBooksFigure {
+      .physicalBooksText {
+        position: absolute;
+        top: -21px;
+        left: 22px;
+        font-size: 0.7rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .physicalBooksContainer {
+    width: 115px;
+    height: 170px;
+    top: 5%;
+    left: 10%;
+    .physicalBooksFigure {
+      .physicalBooksText {
+        position: absolute;
+        top: -21px;
+        left: 22px;
+        font-size: 0.7rem;
+        font-weight: 500;
+      }
+    }
+  }
+  @keyframes ratContainerAnimation {
+    0% {
+      opacity: 0;
+      left: -100px;
+      top: 0;
+    }
+    100% {
+      opacity: 1;
+      left: 10%;
+      top: 5%;
+    }
+  }
+}

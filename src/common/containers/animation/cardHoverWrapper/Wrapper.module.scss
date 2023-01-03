@@ -1,0 +1,101 @@
+.container {
+  height: 250px;
+  width: 162.5px;
+  .tiltBoxWrap {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.6s ease-out;
+    perspective: 1000px;
+    &:hover {
+      transition: all 0.3s linear;
+      transform: scale(1.1);
+    }
+    .tiltBox {
+      position: relative;
+      transition: all 0.2s ease-out;
+      transform: rotateX(0) rotateY(0);
+      perspective: 1000px;
+      transform-style: preserve-3d;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .title {
+        height: 50px;
+        font-size: 1rem;
+        white-space: nowrap;
+        color: rgb(0, 0, 0);
+        text-shadow: 0px 0px 7px white;
+        transform: translateZ(40px);
+      }
+    }
+    .t_over {
+      width: 33.333%;
+      height: 33.333%;
+      position: absolute;
+      z-index: 1;
+      &:nth-child(1) {
+        left: 0;
+        top: 0;
+        &:hover ~ .tiltBox {
+          transform: rotateX(-20deg) rotateY(20deg);
+        }
+      }
+      &:nth-child(2) {
+        left: 33.333%;
+        top: 0;
+        &:hover ~ .tiltBox {
+          transform: rotateX(-20deg) rotateY(0deg);
+        }
+      }
+      &:nth-child(3) {
+        left: 66.666%;
+        top: 0;
+        &:hover ~ .tiltBox {
+          transform: rotateX(-20deg) rotateY(-20deg);
+        }
+      }
+      &:nth-child(4) {
+        left: 0;
+        top: 33.333%;
+        &:hover ~ .tiltBox {
+          transform: rotateX(0deg) rotateY(20deg);
+        }
+      }
+      &:nth-child(5) {
+        left: 33.333%;
+        top: 33.333%;
+        &:hover ~ .tiltBox {
+          transform: rotateX(0deg) rotateY(0deg);
+        }
+      }
+      &:nth-child(6) {
+        left: 66.666%;
+        top: 33.333%;
+        &:hover ~ .tiltBox {
+          transform: rotateX(0deg) rotateY(-20deg);
+        }
+      }
+      &:nth-child(7) {
+        left: 0;
+        top: 66.666%;
+        &:hover ~ .tiltBox {
+          transform: rotateX(20deg) rotateY(20deg);
+        }
+      }
+      &:nth-child(8) {
+        left: 33.333%;
+        top: 66.666%;
+        &:hover ~ .tiltBox {
+          transform: rotateX(20deg) rotateY(0deg);
+        }
+      }
+      &:nth-child(9) {
+        left: 66.666%;
+        top: 66.666%;
+        &:hover ~ .tiltBox {
+          transform: rotateX(20deg) rotateY(-20deg);
+        }
+      }
+    }
+  }
+}

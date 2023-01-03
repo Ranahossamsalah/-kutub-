@@ -1,0 +1,217 @@
+@import "../../Variables.scss";
+#container {
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+.photobanner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: bannermove 25s linear infinite;
+}
+.Eventbanner {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: bolder;
+}
+.pannerHeader {
+  position: relative;
+  top: 10px;
+  color: aliceblue;
+  text-shadow: 0 0 5px $secondaryColor;
+  margin-bottom: 30px;
+}
+.eventsContainer {
+  display: flex;
+}
+.Event {
+  width: 200px;
+  height: 260px;
+  position: relative;
+  color: $secondaryColor;
+  margin: 0 5px;
+}
+
+.outerLayer {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 100px;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.459);
+  Button {
+    background-color: $secondaryColor;
+    margin-top: 15px;
+    text-shadow: 0px 0px 5px black;
+  }
+}
+.Event1,
+.Event2,
+.Event3,
+.Event4,
+.Event5 {
+  box-shadow: 5px 5px 10px white;
+  transition: transform 0.2s;
+  padding: 5px;
+  text-shadow: 2px 2px 5px black;
+}
+.Event img {
+  width: 100%;
+  height: 100%;
+}
+// .Event1 {
+//   top: 30px;
+//   left: 100px;
+// }
+// .Event2 {
+//   top: -230px;
+//   left: 350px;
+// }
+// .Event3 {
+//   top: -490px;
+//   left: 600px;
+// }
+// .Event4 {
+//   top: -750px;
+//   left: 850px;
+// }
+// .Event5 {
+//   top: -1010px;
+//   left: 1100px;
+// }
+.Event1:hover,
+.Event2:hover {
+  transform: scale(1.1) rotate(-3deg);
+}
+.Event3:hover {
+  transform: scale(1.1);
+}
+.Event4:hover,
+.Event5:hover {
+  transform: scale(1.1) rotate(3deg);
+}
+
+@keyframes bannermove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+@media screen and (max-width: 992px) {
+  .pannerHeader {
+    margin-left: 370px;
+  }
+  .Event {
+    width: 180px;
+    height: 260px;
+  }
+  .Event img {
+    width: 100%;
+    height: 100%;
+  }
+  .Event1 {
+    top: 30px;
+    left: 10px;
+  }
+  .Event2 {
+    top: -230px;
+    left: 210px;
+  }
+  .Event3 {
+    top: -490px;
+    left: 410px;
+  }
+  .Event4 {
+    top: -750px;
+    left: 605px;
+  }
+  .Event5 {
+    top: -1010px;
+    left: 800px;
+  }
+}
+@media screen and (max-width: 786px) {
+  .pannerHeader {
+    margin-left: 270px;
+  }
+  .Event {
+    width: 140px;
+    height: 200px;
+  }
+  .Event img {
+    width: 100%;
+    height: 100%;
+  }
+  .Event1 {
+    top: 30px;
+    left: 10px;
+  }
+  .Event2 {
+    top: -170px;
+    left: 165px;
+  }
+  .Event3 {
+    top: -370px;
+    left: 320px;
+  }
+  .Event4 {
+    top: -570px;
+    left: 475px;
+  }
+  .Event5 {
+    top: -770px;
+    left: 630px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .pannerHeader {
+    margin-left: 150px;
+  }
+  .Event {
+    width: 130px;
+    height: 220px;
+  }
+  .Event img {
+    width: 100%;
+    height: 100%;
+  }
+  .Event1 {
+    top: 30px;
+    left: 2px;
+  }
+  .Event2 {
+    top: -190px;
+    left: 145px;
+  }
+  .Event3 {
+    top: -410px;
+    left: 290px;
+  }
+  .Event4 {
+    top: -630px;
+    left: 430px;
+  }
+  .Event5 {
+    top: -1010px;
+    left: 800px;
+  }
+}
+.goToEventPage {
+  width: 50%;
+  background-color: $primaryColor !important;
+}

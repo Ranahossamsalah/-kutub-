@@ -1,0 +1,48 @@
+.footerContainer{
+    width: 100%;
+    height: 40vh;
+    background-color: rgba(0, 0, 0, 0.603);
+    color: white;
+    display: flex;
+    padding-left: 10%;
+    text-align: left;
+    margin-top: 50px;
+    .footersubContainer{
+        width: 50%;
+        height: 100%;
+        padding: 40px 0;
+        .footerPar{
+        margin: 15px 0;
+            width: 50%;
+        }
+    }
+    @media screen and (max-width:768px) {
+    display: flex;
+    padding-left: 10px;
+    .footersubContainer{
+        padding: 40px 0;
+        .footerPar{
+            margin: 15px 0;
+            width: 80%;
+        }
+    }
+        
+    }
+    @media screen and (max-width:576px) {
+        height: 30vh;
+        display: block;
+        padding-left: 10px;
+        .footersubContainer{
+            margin: auto;
+            padding: 20px 0;
+            height: 50%;
+            width: 80%;
+            .footerPar{
+                margin: 15px 0;
+                width: 80%;
+            }
+        }
+            
+        }
+   
+}

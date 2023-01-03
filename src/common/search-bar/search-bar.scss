@@ -1,0 +1,15 @@
+.search-bar {
+  background-color: rgba(173, 216, 230, 0.525);
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  width: 350px;
+  border-radius: 1rem;
+  transition: 0.5 ease-in-out;
+  margin-top: 1rem;
+}
+.searchInput {
+  height: 40px;
+}

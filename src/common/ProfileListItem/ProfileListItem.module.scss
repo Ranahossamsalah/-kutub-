@@ -1,0 +1,40 @@
+@import "../../Variables.scss";
+@mixin optionIcon {
+  width: 32px;
+  height: 32px;
+  margin: 15px;
+  @include BG-Center-noRepeat-Cover;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: translateX(5px);
+  }
+}
+.listItem {
+  position: relative;
+  width: 100%;
+  @include flexCenter;
+  .icon {
+    @include optionIcon;
+  }
+}
+.activeOption {
+  &::after {
+    content: "";
+    width: 3px;
+    height: 30px;
+    position: absolute;
+    right: -2px;
+    background-color: red;
+    border-radius: 25px;
+    animation: activeOption 0.5s ease-in-out;
+  }
+}
+@keyframes activeOption {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

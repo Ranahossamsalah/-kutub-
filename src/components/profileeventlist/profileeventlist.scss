@@ -1,0 +1,44 @@
+@import '../../Variables.scss';
+.singleEvent{
+    width: 40%;
+    margin:10px auto;
+    padding: 10px;
+    display: flex;
+    box-shadow: 0 0 20px $primaryColor;
+    align-items: center;
+
+    img{
+        width: 100px;
+        height: 150px;
+        margin-right: 20px;
+    }
+    .nothingButt{
+        background-color: $primaryColor;
+        margin-left: 110px;
+    }
+}
+.profileEventList{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+.EventTitle{
+    text-align: center;
+}
+.noThingHere{
+    width: 60%;
+    height: 400px;
+    margin: auto;
+    background: url('../../assets/imgs/eventbg.png') no-repeat 100% 100%/cover;
+    padding: 150px 100px 0 100px;
+    .nothingPar{
+        font-size: 35px;
+        font-style: italic;
+        margin-bottom: 50px;
+    }
+    .nothingButt{
+        background-color: $primaryColor;
+        margin-left: 30px;
+    }
+}

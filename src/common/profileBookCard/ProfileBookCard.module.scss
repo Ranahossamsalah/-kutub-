@@ -1,0 +1,6 @@
+@import "../../Variables.scss";
+.Container {
+  width: 162.5px;
+  height: 250px;
+  @include BG-Center-noRepeat-Cover;
+}

@@ -1,0 +1,119 @@
+@import "../../../Variables.scss";
+@mixin OptionIconSize {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.profileSection {
+  height: 100%;
+  width: 317.328px;
+  min-width: 317.328px;
+  background-image: url("../../../assets/imgs/profileSectionBG.jpg");
+  @include BG-Center-noRepeat-Cover;
+  padding: 3.57% 2.85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: end;
+  transition: 0.3s ease-in-out;
+  .options {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .minimize {
+      @include OptionIconSize;
+      background-image: url("../../../assets/icons/minimize.png");
+      @include BG-Center-noRepeat-Cover;
+      min-width: 24px;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+    .rotate {
+      background-image: url("../../../assets/icons/minimize2.png");
+    }
+    .settings {
+      transition: 0.5s ease-in-out;
+      @include OptionIconSize;
+      &:hover {
+        transform: rotate(110deg);
+      }
+    }
+  }
+
+  .ProfilePictureContainer {
+    width: 64px;
+    height: 64px;
+    .ProfilePicture {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .name {
+    margin-top: 7px;
+    font-size: 1.05rem;
+    color: $white;
+  }
+  .status {
+    margin-top: 7px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.801);
+    text-shadow: 1px 1px black;
+  }
+  .pointsContainer {
+    font-size: 1.2rem;
+    width: 100%;
+    height: 50px;
+    margin-top: 30px;
+    @include flexCenter;
+    border-radius: 25px;
+    background-color: $white;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover .pointsIcon {
+      width: 32px;
+      height: 32px;
+    }
+    &:hover {
+      transform: scale(107%) translateY(-10px);
+    }
+    .pointsIcon {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      transition: 0.4s ease-in-out;
+    }
+    .points {
+      color: $fifthColor;
+      font-weight: 600;
+    }
+  }
+  .location {
+    margin-top: 50px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px black;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    .countryTime {
+      margin-top: 20px;
+      font-weight: 500;
+      font-size: 0.7rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      .gmt {
+        margin-left: 17px;
+      }
+    }
+  }
+}
+.close {
+  width: 76.928px;
+  min-width: 76.928px;
+}

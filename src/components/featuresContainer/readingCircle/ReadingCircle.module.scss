@@ -1,0 +1,16 @@
+@import "../../../Variables.scss";
+.readingCircle {
+  @include flexCenter;
+  width: 400px;
+  height: 400px;
+  background-image: url("../../../assets/imgs/readingCircle.png");
+  @include BG-Center-noRepeat-Cover;
+  //   border: 1px solid black;
+  figure {
+    @include flexCenter;
+    width: 100px;
+    img {
+      width: 100%;
+    }
+  }
+}

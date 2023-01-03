@@ -1,0 +1,37 @@
+@import "../../../Variables.scss";
+@mixin optionIcon {
+  width: 32px;
+  height: 32px;
+  margin: 15px;
+  @include BG-Center-noRepeat-Cover;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: translateX(5px);
+  }
+}
+.nav {
+  width: 84.14px;
+  height: 100%;
+  border-right: 1.5px solid rgba(0, 0, 0, 0.068);
+  padding-top: 3.57%;
+  .logoContainer {
+    width: 100%;
+    @include flexCenter;
+    .logo {
+      width: 80%;
+      cursor: pointer;
+    }
+  }
+  .options {
+    padding-top: 60px;
+    @include flexCenter;
+    flex-direction: column;
+    flex: 1;
+    .listItem {
+      position: relative;
+      width: 100%;
+      @include flexCenter;
+    }
+  }
+}

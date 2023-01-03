@@ -1,0 +1,17 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin BG-Center-noRepeat-Cover {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+$primaryColor: #f06643;
+$secondaryColor: #fcd31c;
+$thirdColor: #a5ddf6;
+$forthColor: #5fa6ce;
+$fifthColor: #2566af;
+$sixthColor: #f8f7f3;
+$white: #fff;

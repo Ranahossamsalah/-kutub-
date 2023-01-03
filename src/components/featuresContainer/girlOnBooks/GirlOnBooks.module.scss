@@ -1,0 +1,68 @@
+@import "../../../Variables.scss";
+.girlOnBooksContainer {
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  height: 200px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-image: url("../../../assets/imgs/girlOnBooks.png");
+  @include BG-Center-noRepeat-Cover;
+  z-index: 3;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 25px;
+    height: 25px;
+    background-image: url("../../../assets/icons/brightIdia.gif");
+    top: -27px;
+    right: 39.5%;
+    animation: BrightIdea;
+    animation-duration: 1s;
+    @include BG-Center-noRepeat-Cover;
+  }
+  .readMore {
+    margin-left: 27px;
+  }
+}
+@keyframes BrightIdea {
+  0% {
+    top: 200px;
+    right: 39.5%;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    top: -27px;
+    right: 39.5%;
+  }
+}
+@media (max-width: 500px) {
+  .girlOnBooksContainer {
+    font-size: 0.7rem;
+    font-weight: 500;
+    width: 187.5px;
+    height: 150px;
+    &::after {
+      position: absolute;
+      content: "";
+      top: -27px;
+      right: 37.5%;
+    }
+  }
+  @keyframes BrightIdea {
+    0% {
+      top: 200px;
+      right: 39.5%;
+      opacity: 0;
+      z-index: -1;
+    }
+    100% {
+      top: -27px;
+      right: 37.5%;
+    }
+  }
+}

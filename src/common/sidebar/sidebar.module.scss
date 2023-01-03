@@ -1,0 +1,71 @@
+@import "../../Variables.scss";
+
+.click:active {
+  background-color: black;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: rgb(255, 255, 255);
+  // background-image: url("../../assets/imgs/bg3.jpg");
+  position: sticky;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar li {
+  display: block;
+  color: grey;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.sidebar li.active {
+  background-color: $primaryColor;
+  color: white;
+}
+
+.sidebar li:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+.horroricon {
+  width: 30px;
+  height: 30px;
+  background-image: url("../../assets/icons/horror.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {
+    float: left;
+  }
+  div.content {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}

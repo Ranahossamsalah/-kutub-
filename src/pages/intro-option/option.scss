@@ -1,0 +1,95 @@
+@import "../../Variables.scss";
+
+.main-container {
+	margin-top: 150px;
+}
+.title {
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	font-family: "Merienda One", cursive;
+}
+.container {
+	margin: 0 auto;
+	display: flex;
+	width: 90%;
+	justify-content: space-around;
+	padding: 2%;
+}
+.category {
+	width: 50%;
+	height: 80vh;
+	position: relative;
+	cursor: pointer;
+	transition: 0.4s ease-in-out;
+	margin: 1%;
+	display: flex;
+	align-items: flex-end;
+	box-shadow: 0 10px 10px grey;
+	border-radius: 10px;
+	z-index: 1;
+	overflow: hidden;
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 10px;
+		transition: 1s ease-in-out;
+	}
+}
+.category:hover:before {
+	opacity: 1;
+}
+.category:hover .overlay {
+	opacity: 1;
+	transform: translateY(0);
+}
+.category:hover img {
+	transform: scale(1.2);
+}
+.category:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to top, $primaryColor, transparent);
+	z-index: 2;
+	transition: 0.5s ease-in-out;
+	opacity: 0;
+	border-radius: 10px;
+}
+.category .overlay {
+	margin: 0 auto;
+	padding: 25%;
+	position: relative;
+	z-index: 3;
+	color: #fff;
+	opacity: 0;
+	transform: translateY(50px);
+	transition: 0.6s;
+	p {
+		padding: 1rem;
+		font-size: 2.5rem;
+	}
+}
+.back1,
+.back2 {
+	position: absolute;
+	height: 50%;
+	width: 50%;
+	z-index: 0;
+}
+.back2 {
+	top: -50px;
+	left: -150px;
+}
+.back1 {
+	bottom: -250px;
+	right: -100px;
+}

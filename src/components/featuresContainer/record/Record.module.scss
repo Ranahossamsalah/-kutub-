@@ -1,0 +1,126 @@
+@import "../../../Variables.scss";
+.recordAnimation {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  bottom: 40px;
+  animation: RecordAnimation forwards;
+  animation-duration: 2s;
+  @include flexCenter;
+  &::after {
+    position: absolute;
+    top: -30px;
+    content: "Record books";
+    font-size: 1.05rem;
+    font-weight: 500;
+    opacity: 0;
+    animation: textAnimation 1s forwards;
+    animation-delay: 2s;
+  }
+  .recordContainer {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background-image: url("../../../assets/icons/CD.png");
+    @include BG-Center-noRepeat-Cover;
+    animation: CDAnimation linear forwards;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transition: 1s;
+  }
+  .speedContainer {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    margin-top: 20px;
+    @include flexCenter;
+    animation: SpeedAnimation forwards;
+    animation-duration: 2s;
+    transition: 1s;
+    &::after {
+      content: "";
+      position: absolute;
+      @include BG-Center-noRepeat-Cover;
+      width: 180px;
+      height: 180px;
+      background-image: url("../../../assets/icons/noun-speed-lines-1832045.png");
+      top: 0;
+      right: -170px;
+    }
+  }
+}
+@keyframes CDAnimation {
+  0% {
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes SpeedAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes RecordAnimation {
+  0% {
+    right: -100px;
+  }
+  100% {
+    right: 19%;
+  }
+}
+@keyframes textAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 764px) {
+  .recordAnimation {
+    @keyframes RecordAnimation {
+      0% {
+        right: -100px;
+      }
+      100% {
+        right: 10%;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .recordAnimation {
+    &::after {
+      top: 0;
+    }
+    .recordContainer {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .recordAnimation {
+    bottom: 5px;
+    height: 100px;
+    width: 100px;
+    &::after {
+      position: absolute;
+      top: -10px;
+      content: "Record books";
+      font-size: 0.7rem;
+      font-weight: 500;
+      opacity: 0;
+      animation: textAnimation 1s forwards;
+      animation-delay: 2s;
+    }
+    .recordContainer {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}

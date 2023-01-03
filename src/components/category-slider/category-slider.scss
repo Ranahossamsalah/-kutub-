@@ -1,0 +1,35 @@
+@import "../../Variables.scss";
+
+.slider {
+	cursor: grab;
+	overflow: hidden;
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 1rem;
+	padding: 1rem;
+	border-radius: 10px;
+	background-color: $sixthColor;
+	text-align: start;
+}
+.inner-slider {
+	display: flex;
+}
+.item {
+	min-height: 10rem;
+	padding: 1rem;
+	min-width: 12rem;
+	text-align: center;
+	align-items: center;
+}
+.item img {
+	width: 100%;
+	height: 100%;
+	border-radius: 2rem;
+	pointer-events: none;
+	box-shadow: 5px 5px 10px grey;
+}
+.headLine {
+	cursor: pointer;
+	font-family: "Merienda One", cursive;
+	text-decoration: underline;
+}

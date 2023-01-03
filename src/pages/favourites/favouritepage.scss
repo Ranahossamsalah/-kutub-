@@ -1,0 +1,75 @@
+.favouriteContainer{
+    width: 50%;
+    margin: auto;
+}
+.allFavCardsCont{
+    display: flex;
+    flex-wrap: wrap;
+    background: url('../../assets/imgs/background\ 1.png') center/cover;
+    perspective: 1000px;
+}
+.oneFavCont{
+    width: 180px;
+    height: 250px;
+    background-blend-mode: lighten;
+    margin: 10px;
+    background-repeat: no-repeat;
+    box-shadow: 7px 7px 25px rgba(0, 0, 0, 0.856);
+    border-radius: 15px;
+    transition: all 1s ease;
+    transform-style: preserve-3d;
+    background-image: linear-gradient(210deg, rgba(255, 0, 0, 0.075), rgba(0, 255, 213, 0.199), rgba(17, 160, 255, 0.568));
+}
+.favButtonDiv{
+    width: 35px;
+    margin-left:auto;
+    margin-top: 5px;
+    color: red;
+}
+.favImageDiv{
+margin-top: 10px;
+height: 175px;
+width: 130px;
+margin: auto;
+margin-bottom: 5px;
+img{
+    width: 100%;
+    height: 100%;
+}
+}
+.favEmptyDiv{
+    width: 80%;
+    height: 70vh;
+    background: url('../../assets/imgs/eventbg.png') no-repeat 100%/cover;
+    margin: auto;
+    text-align: center;
+    padding-top: 13%;
+    p{
+        font-size: 35px;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
+}
+
+.front,
+.back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.front{
+    padding-top: 30px;
+}
+
+.back {
+    background-color: antiquewhite;
+    transform: rotateY(180deg);
+    padding: 5px;
+    border-radius: 15px;
+
+}
+
+.oneFavCont:hover {
+    transform: rotateY(180deg);
+}

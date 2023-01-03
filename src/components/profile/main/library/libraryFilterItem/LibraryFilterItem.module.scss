@@ -1,0 +1,38 @@
+@import "../../../../../Variables.scss";
+@mixin optionIcon {
+  width: 32px;
+  height: 32px;
+  margin: 10px;
+  @include BG-Center-noRepeat-Cover;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(5px);
+  }
+}
+.option {
+  position: relative;
+  .text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: TextAnimation forwards;
+    animation-duration: 0.2s;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .icon {
+    @include optionIcon;
+  }
+}
+@keyframes TextAnimation {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  100% {
+    top: -20px;
+    opacity: 1;
+  }
+}

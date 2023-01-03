@@ -1,0 +1,55 @@
+@import '../../Variables.scss';
+
+.oneCartBook,.totalPriceClear{
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.oneCartBook{
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.404);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.644) url('../../assets/imgs/cartbg.jpg');
+    background-blend-mode:soft-light;
+}
+
+.ClearingAll{
+width: 30%;
+height: 50px;
+}
+.totalPrice{
+    border: 1px solid $primaryColor;
+    width: 30%;
+    height: 50px;
+line-height: 50px;
+font-size: larger;
+}
+
+.cartEmpty{
+    width: 80%;
+    height: 350px;
+    margin: 30px auto;
+    background: url('../../assets/imgs/eventbg.png') no-repeat center/cover;
+    padding-top: 120px;
+}
+@media only screen and (max-width:768px) {
+
+.oneCartBook,.totalPriceClear{
+    flex-wrap: wrap;    
+}
+.totalPrice{
+    width: 50%;  
+}
+}
+@media screen and (max-width:576px) {
+
+    .oneCartBook,.totalPriceClear{
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    .totalPrice{
+        width: 60%;  
+    }
+    }
