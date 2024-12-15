@@ -1,3 +1,5 @@
+/** @format */
+
 import "./signup.scss";
 import { useForm } from "react-hook-form";
 import Button from "@mui/material/Button";
@@ -9,8 +11,10 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
+  const navigate=useNavigate()
   const textInput = useRef(null);
   const textInput2 = useRef(null);
   const textInput3 = useRef(null);
@@ -23,14 +27,16 @@ function SignUp() {
     formState: { errors },
     watch,
   } = useForm();
-  const onSubmit = (data) =>{ console.log(data);
+  const onSubmit = (data) => {
+    console.log(data,JSON.stringify(data));
     localStorage.setItem("data", JSON.stringify(data));
     textInput.current.value = "";
     textInput2.current.value = "";
     textInput3.current.value = "";
     textInput4.current.value = "";
     textInput5.current.value = "";
-  }
+    navigate("/signin")
+  };
 
   return (
     <>
@@ -39,7 +45,7 @@ function SignUp() {
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="signUpDiv">
             <TextField
-            inputRef={textInput}
+              inputRef={textInput}
               id="outlined-basic"
               size="small"
               label="Name"
@@ -58,7 +64,7 @@ function SignUp() {
 
           <div className="signUpDiv">
             <TextField
-            inputRef={textInput2}
+              inputRef={textInput2}
               id="outlined-basic"
               size="small"
               label="Email"
@@ -83,8 +89,8 @@ function SignUp() {
 
           <div className="signUpDiv">
             <TextField
-            inputRef={textInput3}
-            id="outlined-basic"
+              inputRef={textInput3}
+              id="outlined-basic"
               size="small"
               label="Address"
               variant="outlined"
@@ -101,7 +107,7 @@ function SignUp() {
             )}
           </div>
 
-          <div style={{textAlign:'left'}} className='signUpDiv'>
+          <div style={{ textAlign: "left" }} className="signUpDiv">
             <FormControl>
               <FormLabel id="demo-row-radio-buttons-group-label">
                 Gender
@@ -109,7 +115,8 @@ function SignUp() {
               <RadioGroup
                 row
                 aria-labelledby="demo-row-radio-buttons-group-label"
-                name="row-radio-buttons-group">
+                name="row-radio-buttons-group"
+              >
                 <FormControlLabel
                   value="female"
                   control={<Radio size="small" />}

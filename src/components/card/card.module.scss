@@ -1,3 +1,5 @@
+/** @format */
+
 @import "../../Variables.scss";
 
 .container {
@@ -9,13 +11,13 @@
   margin-right: 25px;
   margin-left: 25px;
   margin-top: 10px;
-  background-color: #ece5d3;
+  background-color: #ffffff;
   border-radius: 15px;
-  filter: drop-shadow(8px 4px 2px black);
+  filter: drop-shadow(8px 4px 2px rgb(164, 164, 164));
 }
 .container img {
   border-radius: 5px;
-  filter: drop-shadow(0px 3px 1px rgb(106, 106, 106));
+  filter: drop-shadow(0px 3px 1px rgb(136, 136, 136));
 }
 
 // .container:hover {
@@ -39,7 +41,18 @@
 //   margin-left: 12px;
 //   transition: all 1s;
 // }
-
+.record,
+.fav,
+.cart,
+.events {
+  width: 20px;
+  height: 20px;
+  opacity: 70%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
 .info {
   flex-grow: 1;
   text-align: center;
@@ -50,43 +63,21 @@
   font-size: 10px;
   visibility: hidden;
   position: absolute;
-}
-.cart {
   width: 20px;
   height: 20px;
+}
+.cart {
   background-image: url("../../assets/icons/addtocart.gif");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 50%;
 }
 
 .fav {
-  width: 20px;
-  height: 20px;
   background-image: url("../../assets/icons/addtofav.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 50%;
 }
 .record {
-  width: 20px;
-  height: 20px;
   background-image: url("../../assets/icons/record.gif");
-  background-position: center;
-  background-size: cover;
-
-  border-radius: 50%;
 }
 .events {
-  width: 20px;
-  height: 20px;
   background-image: url("../../assets/icons/events.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 50%;
 }
 
 .icons {

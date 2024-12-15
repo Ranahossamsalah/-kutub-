@@ -1,10 +1,13 @@
+/** @format */
+
 import "./signin.scss";
 import { useForm } from "react-hook-form";
 import Button from "@mui/material/Button";
 import { TextField } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link ,useNavigate } from "react-router-dom";
 
 function SignIn() {
+  const navigate=useNavigate()
   const {
     register,
     handleSubmit,
@@ -13,6 +16,7 @@ function SignIn() {
   const onSubmit = (data) => {
     console.log(data);
     localStorage.setItem("data", JSON.stringify(data));
+    navigate("/options")
   };
 
   return (
@@ -76,7 +80,7 @@ function SignIn() {
           </div>
 
           <Button variant="contained" type="submit">
-            Sign In
+            Sign In <Link to="/signup">SignUp</Link>
           </Button>
           <p className="Alreadysignin">
             Dont have an Account ? <Link to="/signup">SignUp</Link>
